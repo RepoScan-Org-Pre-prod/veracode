@@ -6,7 +6,7 @@ veracode_static_scan:
     branches_to_exclude:
       - branch-1
   pull_request:
-    trigger: true
+    trigger: false
     action:
       - opened
       - synchronize
@@ -17,7 +17,7 @@ veracode_static_scan:
   break_build_invalid_policy: false
   break_build_on_error: true
   error_message: Veracode static scan faced a problem.
-  policy: Veracode Recommended Medium +CA
+  policy: Veracode Recommended Medium + SCA
   create_code_scanning_alert: false
   create_issue: false
   issues:
