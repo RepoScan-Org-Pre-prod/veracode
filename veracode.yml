@@ -18,10 +18,11 @@ veracode_static_scan:
   break_build_on_error: true
   error_message: Veracode static scan faced a problem.
   policy: Veracode Recommended Medium + SCA
-  create_code_scanning_alert: false
-  create_issue: false
+  filter_mitigated_flaws: true
+  create_code_scanning_alert: true
+  create_issue: true
   issues:
-    trigger: false
+    trigger: true
     commands:
       - Veracode Static Scan
 veracode_sca_scan:
